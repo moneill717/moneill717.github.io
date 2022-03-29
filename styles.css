@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Rubik',sans-serif;
+    font-size: 14px;
+  }
+  
+  header {
+    background-color: #2d3142;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+  }
+
+  footer {
+      background-color: #2d3142;
+      width: 100%;
+      height: 50px;
+      position: relative;
+      top: 120px;
+  }
+  
+  footer p {
+    color: #ffffff;
+    font-size: 10px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  h1 {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  h2 {
+    color: #2d3142;
+    background-color: #dfe0e0;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  h3 {
+    color: #3e4753;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.4;
+  }
+  
+  p {
+    color: #3e4753;
+    line-height: 1.4;
+  }
+  
+  p.coding {
+    color: #2d3142;
+  }
+  
+  body {
+    background-color: #bfc0c0;
+    margin: 0px;
+  }
+
+  .welcome {
+      position: relative;
+      top: 120px;
+      width: 90%;
+      margin: 0 auto;
+  }
+  
+  .documentation {
+      position: relative;
+      top: 150px;
+      width: 90%;
+      margin: 0 auto;
+  }
+  
+  .coding {
+    font-family: monospace;
+    background-color: #dfe0e0;
+    padding: 1px 2px;
+    margin: 0px 0px;
+    line-height: 1.6;
+  }
+  
+  .multilinecode {
+    background-color: #dfe0e0;
+    width: 180px;
+    padding: 1px 5px 1px 8px;
+  }
+  
+  .stylesheetlink {
+    width: 470px;
+    padding: 1px 5px 1px 8px;
+  }
+  
+  .indent {
+    margin-left: 20px;
+  }
+  
+  td {
+    border: 2px solid #2d3142;
+    padding: 5px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    background-color: #ffffff;
+    margin: 20px 0px;
+    width: 100%;
+  }
+  
+  thead {
+    background-color: #4f5d75;
+    color: #ffffff !important;
+    text-align: center;
+  }
+  
+  .ruleset .firstcol {
+    min-width: 150px;
+    text-align: center;
+  }
+  
+  .ruleset .secondcol {
+    min-width: 400px;
+  }
+  
+  .ruleset .thirdcol {
+    min-width: 250px;
+  }
+
+  .ruleset .fourthcol {
+    min-width: 100px;
+    text-align: center;
+  }
+
+  .properties .firstcol {
+    min-width: 150px;
+    text-align: center;
+  }
+  
+  .properties .secondcol {
+    min-width: 230px;
+  }
+  
+  .properties .thirdcol {
+    min-width: 300px;
+  }
+
+  .properties .fourthcol {
+    min-width: 230px;
+    text-align: center;
+  }
+
+  .properties .fifthcol {
+    min-width: 130px;
+    text-align: center;
+  }
