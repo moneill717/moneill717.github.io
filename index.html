@@ -1,11 +1,146 @@
 <!DOCTYPE html>
-
 <html>
- 
+
+<head>
+  <title>CSS Visual Rules</title>
+  <link href="./Resources/CSS/styles.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+
 <body>
-  <h1>Maura O'Neill</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+    <header>
+    <h1>CSS Visual Rules</h1>
+    </header>
+    <div class='welcome'>
+        <h3>Welcome! Please refer to the following documentation as a basic "cheat sheet" as you build CSS stylesheets. <br><br>Though not an exhaustive resource, this should get you up and running in no time. This resource assumes you have a basic understanding of the HTML language and structure.</h3>
+    </div>
+    <div class='documentation'>
+        <h2>Formatting Rulesets</h2>
+        <p>Before going any further, here is a reminder that I have to give myself every time I start a stylesheet: Don't forget to link your CSS stylesheet to your HTML document! Always include the following line of code within the <span class='coding'>&lt;head&gt;</span> of your HTML file: </p>
+        <p class='coding stylesheetlink'>&lt;link href="nameOfStyleSheet.css" rel="stylesheet"&gt;</p>
+        <p>A ruleset defines the style that applies to different elements in an HTML file. Within the CSS stylesheet, rulesets are formatted as follows:</p>
+        <div class='multilinecode'>
+            <p class='coding'>selector {</p>
+            <p class='coding indent'> property: value;</p>
+            <p class='coding'>}</p>
+        </div>
+        <p>The <span class='coding'>selector</span> indicates what element(s) a CSS style applies to. It is important to pay attention to the specificity of your <span class='coding'>selector</span>. Rulesets with the highest specificity will be applied to their corresponding HTML element(s) instead of rulesets with less specificity.</p>
+            
+        <br>
+        <h2>Selectors</h2>
+        <p>The following table summarizes the CSS syntax and specificity for <span class='coding'>id</span>, <span class='coding'>class</span>, <span class='coding'>attribute</span>, or <span class='coding'>type</span> HTML elements. A <em>universal</em> selector applies styling to all elements in an HTML file; it has no specificity.</p>
+        <table class="ruleset">
+            <thead>
+            <tr>
+                <td class='firstcol'>Element</td>
+                <td><strong>HTML Format</strong>, Example</td>
+                <td><strong>CSS Selector Format</strong>, Example</td>
+                <td class='fourthcol'>Specificity</td>
+            </tr>
+            </thead>
+            <tr>
+                <td class='firstcol'>ID</td>
+                <td class='secondcol'><strong><span class='coding'>&lt;type id='id'&gt;</span></strong>, <span class='coding'>&lt;p id='apple'&gt;</span></td>
+                <td class='thirdcol'><strong><span class='coding'>#id {}</span></strong>, <span class='coding'>#apple {}</span></td>
+                <td class='fourthcol'>100</td>
+            </tr>
+            <tr>
+            <td class="firstcol">Class</td>
+            <td><strong><span class='coding'>&lt;type class='class'&gt;</span></strong>, <span class='coding'>&lt;p class='banana'&gt;</span></td>
+            <td><strong><span class='coding'>.class {}</span></strong>, <span class='coding'>.banana {}</span></td>
+            <td class='fourthcol'>10</td>
+            </tr>
+            <tr>
+            <td class='firstcol'>Attribute</td>
+            <td><strong><span class='coding'>&lt;attribute&gt;</span></strong>, <span class='coding'>&lt;strong&gt;</span></td>
+            <td><strong><span class='coding'>attribute {}</span></strong>, <span class='coding'>strong {}</span></td>
+            <td class='fourthcol'>10</td>
+            </tr>
+            <tr>
+                <td class="firstcol">Type</td>
+                <td><strong><span class='coding'>&lt;type&gt;</span></strong>, <span class='coding'>&lt;p&gt;</span></td>
+                <td><strong><span class='coding'>type {}</span></strong>, <span class='coding'>p {}</span></td>
+                <td class='fourthcol'>1</td>
+            </tr>
+            <tr>
+            <td class='firstcol'>Universal</td>
+            <td></td>
+            <td><strong><span class='coding'>* {}</span></strong>, <span class='coding'>* {}</span></td>
+            <td class='fourthcol'>0</td>
+            </tr>
+        </table>
+        <br>
+        <h2>Properties and Values</h2>
+        <p>The following table includes many of the CSS properties that define the visual style of HTML elements as well as their corresponding values and any important considerations when using each property.</p>
+        <table class="properties">
+            <thead>
+            <tr>
+                <td class="firstcol">Property</td>
+                <td class="secondcol">Syntax</td>
+                <td class="thirdcol">Example Values</td>
+                <td class="fourthcol">Purpose</td>
+                <td class="fifthcol">Important Notes</td>
+            </tr>
+            </thead>
+            <tr>
+                <td class="firstcol">Font family</td>
+                <td><span class='coding'>font-family: value;</span></td>
+                <td><span class='coding'>'Garamond'</span>, <span class='coding'>'Times New Roman'</span>, <span class='coding'>Montserrat</span>, <span class='coding'>serif</span></td>
+                <td>Changes the font style of an element</td>
+                <td>Multi-word font families like Times New Roman require quotes around them, <span class='coding'>'Times New Roman'</span>.</td>
+            </tr>
+            <tr>
+                <td class="firstcol">Font size</td>
+                <td><span class='coding'>font-size: value;</span></td>
+                <td><span class='coding'>18px</span>, <span class='coding'>10px</span></td>
+                <td>Changes the font size of an element</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="firstcol">Font weight</td>
+                <td><span class='coding'>font-weight: value;</span></td>
+                <td><span class='coding'>bold</span>, <span class='coding'>normal</span></td>
+                <td>Changes the weight of an element's font</td>
+                <td>The value for the <span class='coding'>font-weight</span> can also be a number between <span class='coding'>0</span> and <span class='coding'>900</span>; <span class='coding'>bold</span> corresponds to <span class='coding'>900</span>.</td>
+            </tr>
+            <tr>
+                <td class="firstcol">Text align</td>
+                <td><span class='coding'>text-align: value;</span></td>
+                <td><span class='coding'>left</span>, <span class='coding'>center</span>, <span class='coding'>right</span>, <span class='coding'>justify</span></td>
+                <td>Aligns text within its parent element</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="firstcol">Font color</td>
+                <td><span class='coding'>color: value;</span></td>
+                <td><span class='coding'>blue</span>, <span class='coding'>rgb()</span>, <span class='coding'>rgba()</span>, <span class='coding'>hsl()</span>, <span class='coding'>hsla()</span></td>
+                <td>Changes the font color within an element</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="firstcol">Background color</td>
+                <td><span class='coding'>background-color: value;</span></td>
+                <td><span class='coding'>blue</span>, <span class='coding'>rgb()</span>, <span class='coding'>rgba()</span>, <span class='coding'>hsl()</span>, <span class='coding'>hsla()</span></td>
+                <td>Changes the color of an element's background</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="firstcol">Opacity</td>
+                <td><span class='coding'>opacity: value;</span></td>
+                <td><span class='coding'>0</span>, <span class='coding'>0.3</span>, <span class='coding'>0.8</span>, <span class='coding'>1</span></td>
+                <td>The measure of how transparent an element is</td>
+                <td>The opacity value can be any decimal number between 0 and 1.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <footer>
+        <p>Copyright by Maura Rose O'Neill, 2022.</p>
+    </footer>
+    
 </body>
- 
+
 </html>
